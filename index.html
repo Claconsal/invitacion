@@ -68,11 +68,49 @@
 <body>
   <div class="card">
     <img src="imagenes/70txt.jpg" alt="Foto del festejado Pepe">
-    <h1>¡70 Años de Pepe!</h1>
-    <p>Hola, con mucha alegría los invitamos a celebrar el cumpleaños 70 de <strong>Pepe</strong>. Sería un honor contar con su presencia.</p>
+    <h1>¡70 Años!</h1>
+
+
+    
+    <p>Hola, con mucha alegría los invitamos a celebrar el cumpleaños 70 de 
+        <strong><h1>Pepe</strong></h1> 
+    
+    
+        <p>Sería un honor contar con su presencia.</p>
     <p>Los esperamos para disfrutar juntos de esta fiesta rodeados de familia y amigos.</p>
 <img src="imagenes/cara papa.jpg" alt="Foto del festejado Pepe">
     <div class="info">
+
+       <h1>Fecha Sábado 09 de agosto, 2025</h1>
+    <div id="contador">Calculando...</div>
+
+    <script>
+        // Establece la fecha objetivo (09 de agosto de 2025 a las 14:00)
+        const fechaObjetivo = new Date("2025-08-09T14:00:00");
+
+        function actualizarContador() {
+            const ahora = new Date();
+            const diferencia = fechaObjetivo - ahora;
+
+            if (diferencia <= 0) {
+                document.getElementById("contador").innerHTML = "¡La fecha ha llegado!";
+                return;
+            }
+
+            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById("contador").innerHTML =
+                `Faltan ${dias} días, ${horas} horas y ${minutos} minutos.`;
+        }
+
+        // Actualiza el contador cada minuto
+        actualizarContador();
+        setInterval(actualizarContador, 60000); // cada 60 segundos
+    </script>
+
+    </div>
       📍 <strong>Lugar:</strong> Calle Independencia 192, La Santa Cruz, La Pastora, <br>Santiago de Querétaro, Qro., México<br>
       🕑 <strong>Hora:</strong> 2:00 PM
     </div>
@@ -81,7 +119,7 @@
       Ver ubicación en Google Maps
     </a>
     
-    <div class="footer">¡Te esperamos con cariño! 🎉</div>
+    <div class="footer"><h1>¡Te esperamos con cariño! 🎉</div></h1>
   </div>
 </body>
 </html>
